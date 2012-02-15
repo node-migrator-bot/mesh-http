@@ -1,0 +1,15 @@
+{
+  "directories": {},
+  "name": "mesh-http",
+  "description": "cross-platform http routing",
+  "author": "",
+  "version": "0.0.1",
+  "dependencies": {
+    "beanpoll-http": "*",
+    "underscore": "*",
+    "beanpoll": "*",
+    "mesh-winston": "*",
+    "mime": "1.2.x"
+  },
+  "devDependencies": {}
+}
