@@ -3,7 +3,7 @@
   "name": "mesh-http",
   "description": "cross-platform http routing",
   "author": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
     "beanpoll-http": "*",
     "underscore": "*",

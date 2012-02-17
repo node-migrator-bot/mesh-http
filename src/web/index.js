@@ -164,7 +164,7 @@ exports.plugin = function(router)
 
 		'pull load/*': function(req, res, mw) {
 			$(document).ready(function() {
-				nw.next();
+				mw.next();
 			});
 		},
 
