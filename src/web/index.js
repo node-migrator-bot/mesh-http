@@ -86,6 +86,7 @@ exports.plugin = function(router)
 
 	window.onpopstate = function(e)
 	{
+		logger.verbose('pop state');
 
 		var state = e.state;     
 
@@ -107,8 +108,7 @@ exports.plugin = function(router)
 		 */
 
 		'push redirect': function(ops)
-		{                                           
-
+		{        
 			var channel, data;
 
 			if(typeof ops == 'string')
@@ -141,7 +141,6 @@ exports.plugin = function(router)
 
                                                       
 				logger.info('redirect to ' + channel);
-
 
 				window.history.pushState({ data: data, channel: channel } , null, ('/' + channel).replace(/\/+/g,'/'));     
 

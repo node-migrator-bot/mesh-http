@@ -11,5 +11,9 @@
     "mesh-winston": "*",
     "mime": "1.2.x"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/crcn/mesh-http.git"
+  }
 }
