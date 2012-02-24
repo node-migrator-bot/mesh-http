@@ -1,5 +1,4 @@
 {
-  "directories": {},
   "name": "mesh-http",
   "description": "cross-platform http routing",
   "author": "",
@@ -12,6 +11,11 @@
     "mime": "1.2.x"
   },
   "devDependencies": {},
+  "main": "./lib/node/index.js",
+  "directories": {
+    "mesh-src": "./src",
+    "lib": "./lib"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/crcn/mesh-http.git"

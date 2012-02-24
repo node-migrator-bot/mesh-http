@@ -14,35 +14,35 @@ beanpoll.Response.prototype.redirect = function(location) {
 
 exports.plugin = function(router)
 {
-	var currentChannel,
+	var currentPath,
 	pushedReady = false;
 
 
 
 
-	function normalizeChannel(channel)
+	function normalizePath(path)
 	{
-		return router.parse.stringifyPaths(router.parse.parseChannel(channel).paths)
+		return router.parse.stringifyPaths(router.parse.parsePath(path).paths)
 	}
 
 
-	var prevChannel;
+	var prevPath;
 
 
-	function pullState(channel, data)
+	function pullState(path, data)
 	{
-		if(channel.substr(0,1) != '/') channel = '/' + channel;
+		if(path.substr(0,1) != '/') path = '/' + path;
 
-		var parts = Url.parse(channel, true);
+		var parts = Url.parse(path, true);
 
-		if(parts.pathname == prevChannel)
+		if(parts.pathname == prevPath)
 		{
-			console.log('alreading viewing %s', prevChannel);
+			console.log('alreading viewing %s', prevPath);
 			return
 		}
 
 
-		prevChannel = parts.pathname;
+		prevPath = parts.pathname;
 
 		var hostname = window.location.hostname,
 		hostnameParts = hostname.split('.');
@@ -92,11 +92,11 @@ exports.plugin = function(router)
 
 		if(!state) return;
 
-		currentChannel = state.channel;       
+		currentPath = state.path;       
 
-		router.push('track/pageView', { page: state.channel });
+		router.push('track/pageView', { page: state.path });
                                  
-		pullState(state.channel || state.hash, state.data);
+		pullState(state.path || state.hash, state.data);
 	}  
 
 	/**
@@ -109,42 +109,42 @@ exports.plugin = function(router)
 
 		'push redirect': function(ops)
 		{        
-			var channel, data;
+			var path, data;
 
 			if(typeof ops == 'string')
 			{
-				channel = ops;
+				path = ops;
 				data = {};
 				ops = {};
 			}
 			else
 			{
-				channel = ops.channel;
+				path = ops.path;
 				data = ops.data;
 			}
 
-			if(!channel) return;
+			if(!path) return;
 
-			var urlParts = Url.parse(channel, true);   
+			var urlParts = Url.parse(path, true);   
 
 
 
 			var uri = urlParts.pathname,
-			newChannel = normalizeChannel(uri);
+			newPath = normalizePath(uri);
 
 			data = _.extend(urlParts.query, data);
 
 
 			if(router.request(uri).type('pull').tag('http', true).hasListeners())
 			{	
-				if(newChannel == currentChannel) return;
+				if(newPath == currentPath) return;
 
                                                       
-				logger.info('redirect to ' + channel);
+				logger.info('redirect to ' + path);
 
-				window.history.pushState({ data: data, channel: channel } , null, ('/' + channel).replace(/\/+/g,'/'));     
+				window.history.pushState({ data: data, path: path } , null, ('/' + path).replace(/\/+/g,'/'));     
 
-				router.push('track/pageView', { page: channel });
+				router.push('track/pageView', { page: path });
 			}
 
 			// else
@@ -152,7 +152,7 @@ exports.plugin = function(router)
 
 				if(ops.pull === undefined || ops.pull == true)
 				//not a viewable item? pull it. might do something else that's fancy...
-				pullState(channel, data);	
+				pullState(path, data);	
 			}
 
 

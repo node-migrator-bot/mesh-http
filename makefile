@@ -5,8 +5,8 @@ clean:
 
 
 web:
-	mesh make web 
+	mesh merge web 
 
 node:
-	mesh make node 
+	mesh merge node 
 
