@@ -127,6 +127,8 @@ exports.plugin = function(router)
 
 			var urlParts = Url.parse(path, true);   
 
+			logger.info('push recv ' + path);
+
 
 
 			var uri = urlParts.pathname,
