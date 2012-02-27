@@ -51,7 +51,15 @@
 			"file": "src/web/index.js",
 			"settings":
 			{
-				"buffer_size": 3478,
+				"buffer_size": 3516,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin FoAzOT.txt",
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -272,7 +280,7 @@
 			"file": "lib/web/index.js",
 			"settings":
 			{
-				"buffer_size": 3472,
+				"buffer_size": 3516,
 				"line_ending": "Unix"
 			}
 		}
@@ -446,6 +454,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"redirect",
 			"stringify",
 			"pullState",
 			"pull",
@@ -673,7 +682,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2279.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -683,15 +692,15 @@
 					"file": "src/web/index.js",
 					"settings":
 					{
-						"buffer_size": 3478,
+						"buffer_size": 3516,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								453,
-								462
+								2311,
+								2311
 							]
 						],
 						"settings":
@@ -700,14 +709,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1487.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "/tmp/subl stdin JmckLT.txt",
+					"file": "/tmp/subl stdin FoAzOT.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -733,7 +742,7 @@
 				},
 				{
 					"buffer": 6,
-					"file": "/tmp/subl stdin 1sRyFm.txt",
+					"file": "/tmp/subl stdin JmckLT.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -759,7 +768,7 @@
 				},
 				{
 					"buffer": 7,
-					"file": "/tmp/subl stdin AQfxjP.txt",
+					"file": "/tmp/subl stdin 1sRyFm.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -785,7 +794,7 @@
 				},
 				{
 					"buffer": 8,
-					"file": "/tmp/subl stdin SwD8YN.txt",
+					"file": "/tmp/subl stdin AQfxjP.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -811,6 +820,32 @@
 				},
 				{
 					"buffer": 9,
+					"file": "/tmp/subl stdin SwD8YN.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"settings":
 					{
 						"buffer_size": 7,
@@ -836,7 +871,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 11,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -862,7 +897,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 12,
 					"file": "examples/hello-world/package.json",
 					"settings":
 					{
@@ -888,7 +923,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 13,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -914,7 +949,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 14,
 					"file": "examples/hello-world/src/web/index.html",
 					"settings":
 					{
@@ -940,7 +975,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 15,
 					"file": "examples/hello-world/src/common/index.js",
 					"settings":
 					{
@@ -966,7 +1001,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 16,
 					"file": "examples/hello-world/src/web/mesh.merge.json",
 					"settings":
 					{
@@ -994,7 +1029,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 17,
 					"file": "examples/hello-world/src/web/package.json",
 					"settings":
 					{
@@ -1020,7 +1055,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 18,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -1046,7 +1081,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 19,
 					"file": "examples/hello-world/src/common/plugin.js",
 					"settings":
 					{
@@ -1072,7 +1107,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 20,
 					"file": "src/web/utils.js",
 					"settings":
 					{
@@ -1098,7 +1133,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 21,
 					"file": "src/node/middleware/beanpoll.js",
 					"settings":
 					{
@@ -1125,7 +1160,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 22,
 					"file": "src/node/middleware/checkAgent.js",
 					"settings":
 					{
@@ -1152,7 +1187,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 23,
 					"file": "package.json",
 					"settings":
 					{
@@ -1180,7 +1215,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 24,
 					"file": "examples/hello-world/makefile",
 					"settings":
 					{
@@ -1206,7 +1241,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 25,
 					"file": "examples/hello-world/src/common/routes.js",
 					"settings":
 					{
@@ -1233,7 +1268,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 25,
+					"buffer": 26,
 					"file": "examples/hello-world/lib/web/index.js",
 					"settings":
 					{
@@ -1259,7 +1294,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 26,
+					"buffer": 27,
 					"file": "examples/hello-world/lib/web/js/routes.js",
 					"settings":
 					{
@@ -1286,7 +1321,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 27,
+					"buffer": 28,
 					"file": "examples/hello-world/lib/web/index.html",
 					"settings":
 					{
@@ -1312,7 +1347,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 28,
+					"buffer": 29,
 					"file": ".cupboard",
 					"settings":
 					{
@@ -1338,7 +1373,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 29,
+					"buffer": 30,
 					"file": "/tmp/subl stdin fQj5ET.txt",
 					"settings":
 					{
@@ -1364,7 +1399,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 31,
 					"file": "/tmp/subl stdin nEzLu1.txt",
 					"settings":
 					{
@@ -1390,7 +1425,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 32,
 					"file": "/tmp/subl stdin wuD5ba.txt",
 					"settings":
 					{
@@ -1416,11 +1451,11 @@
 					"type": "text"
 				},
 				{
-					"buffer": 32,
+					"buffer": 33,
 					"file": "lib/web/index.js",
 					"settings":
 					{
-						"buffer_size": 3472,
+						"buffer_size": 3516,
 						"regions":
 						{
 						},

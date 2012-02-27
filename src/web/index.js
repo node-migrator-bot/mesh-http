@@ -4,7 +4,8 @@ var utils = require('./utils'),
 _    = require('underscore'),
 Url = require('url'),
 logger = require('mesh-winston').loggers.get('history.core'),
-beanpoll = require('beanpoll');
+beanpoll = require('beanpoll'),
+qs = require('querystring');
 
 
 beanpoll.Response.prototype.redirect = function(location) {
@@ -44,14 +45,16 @@ exports.plugin = function(router)
 
 		prevPath = parts.pathname;
 
-		var hostname = window.location.hostname,
+		var hostname  = window.location.hostname,
 		hostnameParts = hostname.split('.');
-		subdomain = hostnameParts.length > 2 ? hostnameParts.shift() : undefined;
+		subdomain     = hostnameParts.length > 2 ? hostnameParts.shift() : undefined,
+		query         = _.extend(parts.query, data, true),
+		queryStringified = qs.stringify(query) || '';
 
 
 		logger.info('navigate to ' + parts.pathname);
 
-		router.request(parts.pathname).query(_.extend(parts.query, data, true)).headers({ subdomain: subdomain, stream: true }).success(function(stream)
+		router.request(parts.pathname).query(query).headers({ subdomain: subdomain, stream: true, url: parts.pathname + (queryStringified.length ? '?' + queryStringified : '') }).success(function(stream)
 		{
 
 			logger.info('dumping stream data');
