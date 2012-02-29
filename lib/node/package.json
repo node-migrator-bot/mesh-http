@@ -8,7 +8,8 @@
     "underscore": "*",
     "beanpoll": "*",
     "mesh-winston": "*",
-    "mime": "1.2.x"
+    "mime": "1.2.x",
+    "sprintf": "0.1.x"
   },
   "devDependencies": {},
   "main": "./lib/node/index.js",

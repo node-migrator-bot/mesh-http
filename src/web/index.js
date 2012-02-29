@@ -5,7 +5,9 @@ _    = require('underscore'),
 Url = require('url'),
 logger = require('mesh-winston').loggers.get('history.core'),
 beanpoll = require('beanpoll'),
-qs = require('querystring');
+qs = require('querystring'),
+sprintf = require('sprintf').sprintf,
+path = require('path');
 
 
 beanpoll.Response.prototype.redirect = function(location) {
@@ -27,34 +29,20 @@ exports.plugin = function(router)
 	}
 
 
-	var prevPath;
 
-
-	function pullState(path, data)
+	function pullState(parts)
 	{
-		if(path.substr(0,1) != '/') path = '/' + path;
-
-		var parts = Url.parse(path, true);
-
-		if(parts.pathname == prevPath)
-		{
-			console.log('alreading viewing %s', prevPath);
-			return
-		}
-
-
-		prevPath = parts.pathname;
-
 		var hostname  = window.location.hostname,
 		hostnameParts = hostname.split('.');
-		subdomain     = hostnameParts.length > 2 ? hostnameParts.shift() : undefined,
-		query         = _.extend(parts.query, data, true),
-		queryStringified = qs.stringify(query) || '';
+		subdomain     = hostnameParts.length > 2 ? hostnameParts.shift() : undefined;
 
 
 		logger.info('navigate to ' + parts.pathname);
 
-		router.request(parts.pathname).query(query).headers({ subdomain: subdomain, stream: true, url: parts.pathname + (queryStringified.length ? '?' + queryStringified : '') }).success(function(stream)
+		router.request(parts.pathname).
+		query(parts.query).
+		headers({ subdomain: subdomain, stream: true, url: parts.href }).
+		success(function(stream)
 		{
 
 			logger.info('dumping stream data');
@@ -87,20 +75,83 @@ exports.plugin = function(router)
 	}
 
 
+	/**
+	 */
+
 	window.onpopstate = function(e)
 	{
 		logger.verbose('pop state');
 
 		var state = e.state;     
 
-		if(!state) return;
 
-		currentPath = state.path;       
+		if(!state || !setLocation(state)) {
+			return;
+		}
 
-		router.push('track/pageView', { page: state.path });
+		router.push('track/pageView', { page: state.href });
                                  
-		pullState(state.path || state.hash, state.data);
-	}  
+		pullState(state);
+	} 
+
+	var prevLocation;
+
+	/**
+	 */
+
+	function parseLocation(location, data) {
+
+		if(typeof location == 'object') return location;
+
+		var newLocation      = Url.parse(path.normalize("/"+location), true);
+
+
+		if(data) _.extend(newLocation.query, data);
+
+		return newLocation;
+	}
+
+	/**
+	 */
+
+	function canSetLocation(location, data) {
+
+		var newLocation  = parseLocation(location, data);
+
+		if(!prevLocation || prevLocation.pathname != newLocation.pathname) return true;
+
+		var compare = _.uniq(Object.keys(prevLocation.query).concat(Object.keys(newLocation.query)));
+
+		for(var i = compare.length; i--;) {
+
+			var key = compare[i];
+
+			if(prevLocation.query[key] != newLocation.query[key]) return true;
+
+		}
+
+		return false;
+
+	}
+
+
+	/**
+	 */
+
+	function setLocation(location, data) {
+
+		var newLocation = parseLocation(location, data);
+
+		if(canSetLocation(newLocation)) {
+			return !!(prevLocation = newLocation);
+		}
+
+
+
+		logger.info(sprintf('already viewing %s', newLocation.href));
+
+		return false;
+	} 
 
 	/**
 	 */
@@ -112,52 +163,57 @@ exports.plugin = function(router)
 
 		'push redirect': function(ops)
 		{        
-			var path, data;
+			var newUrl, data;
+
 
 			if(typeof ops == 'string')
 			{
-				path = ops;
+				newUrl = ops;
 				data = {};
 				ops = {};
 			}
 			else
 			{
-				path = ops.path;
-				data = ops.data;
+				newUrl = ops.path;
+				data   = ops.data;
 			}
 
-			if(!path) return;
-
-			var urlParts = Url.parse(path, true);   
-
-			logger.info('push recv ' + path);
+			if(!newUrl) return;
 
 
+			var urlParts = parseLocation(newUrl, data);  
 
-			var uri = urlParts.pathname,
-			newPath = normalizePath(uri);
+			logger.info('push recv ' + newUrl);
 
-			data = _.extend(urlParts.query, data);
-
-
-			if(router.request(uri).type('pull').tag('http', true).hasListeners())
+			if(router.request(urlParts.pathname).type('pull').tag('http', true).hasListeners())
 			{	
-				if(newPath == currentPath) return;
+				console.log(urlParts.href)
+
+				if(!setLocation(urlParts)) {
+					return;
+				}
 
                                                       
-				logger.info('redirect to ' + path);
+				logger.info(sprintf('redirect to %s', urlParts.href));
 
-				window.history.pushState({ data: data, path: path } , null, ('/' + path).replace(/\/+/g,'/'));     
+				window.history.pushState(urlParts, null, urlParts.href);     
 
-				router.push('track/pageView', { page: path });
+				router.push('track/pageView', { page: urlParts.href });
+
+			} else {
+
+				logger.info('page does not exist, redirecting to home page');
+
+				router.push('redirect', '/');
+				return false;
 			}
 
-			// else
-			{
 
-				if(ops.pull === undefined || ops.pull == true)
+			if(ops.pull === undefined || ops.pull == true) {
 				//not a viewable item? pull it. might do something else that's fancy...
-				pullState(path, data);	
+				pullState(urlParts);	
+			} else {
+				logger.warn('Unable to do anything with push state');
 			}
 
 
