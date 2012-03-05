@@ -204,7 +204,8 @@ exports.plugin = function(router)
 
 				logger.info('page does not exist, redirecting to home page');
 
-				router.push('redirect', '/');
+				// router.push('redirect', '/');
+				window.location = '/';
 				return false;
 			}
 
