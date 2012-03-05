@@ -2,7 +2,7 @@
   "name": "mesh-http",
   "description": "cross-platform http routing",
   "author": "",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "dependencies": {
     "beanpoll-http": "*",
     "underscore": "*",
@@ -14,11 +14,12 @@
   "devDependencies": {},
   "main": "./lib/node/index.js",
   "directories": {
-    "mesh-src": "./src",
+    "src": "./src",
     "lib": "./lib"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/crcn/mesh-http.git"
-  }
+  },
+  "mesh": true
 }

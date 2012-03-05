@@ -14,11 +14,12 @@
     "devDependencies": {},
     "main": "./lib/node/index.js",
     "directories": {
-        "mesh-src": "./src",
+        "src": "./src",
         "lib": "./lib"
     },
     "repository": {
         "type": "git",
         "url": "git://github.com/crcn/mesh-http.git"
-    }
+    },
+    "mesh": true
 }
