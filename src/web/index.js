@@ -11,7 +11,9 @@ path = require('path');
 
 
 beanpoll.Response.prototype.redirect = function(location) {
+	console.log("REDIR")
 	this.headers({ redirect: location });
+	
 	this.end();
 }
 
@@ -51,7 +53,7 @@ exports.plugin = function(router)
 
 			stream.dump({
 				error: function(err) {
-					console.log(err.stack);
+					console.log(err);
 				},
 				headers: function(res)
 				{
@@ -59,6 +61,7 @@ exports.plugin = function(router)
 
 					if(res.redirect)
 					{
+						logger.verbose('redirect')
 						router.push('redirect', res.redirect);
 					}
 				},
@@ -66,6 +69,7 @@ exports.plugin = function(router)
 					buffer += chunk
 				},
 				end: function() {
+					logger.verbose("http ended")
 					if(response.redirect || response.dontPrint) return;
 					
 					document.body.innerHTML = buffer;
@@ -163,7 +167,7 @@ exports.plugin = function(router)
 
 		'push redirect': function(ops)
 		{        
-			var newUrl, data;
+			var newUrl, query;
 
 
 			if(typeof ops == 'string')
@@ -175,19 +179,20 @@ exports.plugin = function(router)
 			else
 			{
 				newUrl = ops.path;
-				data   = ops.data;
+
+				//data is deprecated
+				query   = ops.data || ops.query;
 			}
 
 			if(!newUrl) return;
 
 
-			var urlParts = parseLocation(newUrl, data);  
+			var urlParts = parseLocation(newUrl, query);  
 
 			logger.info('push recv ' + newUrl);
 
 			if(router.request(urlParts.pathname).type('pull').tag('http', true).hasListeners())
 			{	
-				console.log(urlParts.href)
 
 				if(!setLocation(urlParts)) {
 					return;
