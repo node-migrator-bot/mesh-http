@@ -59,7 +59,7 @@
 			"file": "src/web/index.js",
 			"settings":
 			{
-				"buffer_size": 4491,
+				"buffer_size": 4617,
 				"line_ending": "Unix"
 			}
 		},
@@ -225,6 +225,14 @@
 			"settings":
 			{
 				"buffer_size": 569,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin DRW2gV.txt",
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -486,6 +494,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"data",
+			"redirect",
 			"parts",
 			"pullState",
 			"setLocation",
@@ -611,9 +621,7 @@
 			"trySending",
 			"onSubscriptionInfo",
 			"login",
-			"getToken",
-			"args",
-			"--all"
+			"getToken"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -631,7 +639,7 @@
 	"groups":
 	[
 		{
-			"selected": 26,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -772,15 +780,15 @@
 					"file": "src/web/index.js",
 					"settings":
 					{
-						"buffer_size": 4491,
+						"buffer_size": 4617,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4065,
-								4065
+								3107,
+								3107
 							]
 						],
 						"settings":
@@ -789,7 +797,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2869.0,
+						"translation.y": 2282.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1348,6 +1356,32 @@
 				},
 				{
 					"buffer": 27,
+					"file": "/tmp/subl stdin DRW2gV.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 28,
 					"file": "examples/hello-world/makefile",
 					"settings":
 					{
@@ -1373,7 +1407,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 28,
+					"buffer": 29,
 					"file": "examples/hello-world/src/common/routes.js",
 					"settings":
 					{
@@ -1400,7 +1434,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 29,
+					"buffer": 30,
 					"file": "examples/hello-world/lib/web/index.js",
 					"settings":
 					{
@@ -1426,7 +1460,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 30,
+					"buffer": 31,
 					"file": "examples/hello-world/lib/web/js/routes.js",
 					"settings":
 					{
@@ -1453,7 +1487,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 32,
 					"file": "examples/hello-world/lib/web/index.html",
 					"settings":
 					{
@@ -1479,7 +1513,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 32,
+					"buffer": 33,
 					"file": ".cupboard",
 					"settings":
 					{
@@ -1505,7 +1539,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 33,
+					"buffer": 34,
 					"file": "/tmp/subl stdin fQj5ET.txt",
 					"settings":
 					{
@@ -1531,7 +1565,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 34,
+					"buffer": 35,
 					"file": "/tmp/subl stdin nEzLu1.txt",
 					"settings":
 					{
@@ -1557,7 +1591,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 35,
+					"buffer": 36,
 					"file": "/tmp/subl stdin wuD5ba.txt",
 					"settings":
 					{
@@ -1583,7 +1617,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 36,
+					"buffer": 37,
 					"file": "lib/web/index.js",
 					"settings":
 					{
@@ -1610,7 +1644,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 37,
+					"buffer": 38,
 					"file": "/tmp/subl stdin tY3pAm.txt",
 					"settings":
 					{
