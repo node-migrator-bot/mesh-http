@@ -59,7 +59,23 @@
 			"file": "src/web/index.js",
 			"settings":
 			{
-				"buffer_size": 4617,
+				"buffer_size": 4775,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin bj6rWx.txt",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/tmp/subl stdin ptL4Du.txt",
+			"settings":
+			{
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -312,7 +328,7 @@
 			"file": "lib/web/index.js",
 			"settings":
 			{
-				"buffer_size": 4491,
+				"buffer_size": 4740,
 				"line_ending": "Unix"
 			}
 		},
@@ -494,6 +510,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"parseLocation",
 			"data",
 			"redirect",
 			"parts",
@@ -620,8 +637,7 @@
 			"updateSubscriptionInfo",
 			"trySending",
 			"onSubscriptionInfo",
-			"login",
-			"getToken"
+			"login"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -780,15 +796,15 @@
 					"file": "src/web/index.js",
 					"settings":
 					{
-						"buffer_size": 4617,
+						"buffer_size": 4775,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3107,
-								3107
+								3540,
+								3540
 							]
 						],
 						"settings":
@@ -797,14 +813,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2282.0,
+						"translation.y": 2355.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "/tmp/subl stdin MoczBO.txt",
+					"file": "/tmp/subl stdin bj6rWx.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -830,7 +846,7 @@
 				},
 				{
 					"buffer": 7,
-					"file": "/tmp/subl stdin tngyyq.txt",
+					"file": "/tmp/subl stdin ptL4Du.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -856,7 +872,7 @@
 				},
 				{
 					"buffer": 8,
-					"file": "/tmp/subl stdin FoAzOT.txt",
+					"file": "/tmp/subl stdin MoczBO.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -882,7 +898,7 @@
 				},
 				{
 					"buffer": 9,
-					"file": "/tmp/subl stdin JmckLT.txt",
+					"file": "/tmp/subl stdin tngyyq.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -908,7 +924,7 @@
 				},
 				{
 					"buffer": 10,
-					"file": "/tmp/subl stdin 1sRyFm.txt",
+					"file": "/tmp/subl stdin FoAzOT.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -934,7 +950,7 @@
 				},
 				{
 					"buffer": 11,
-					"file": "/tmp/subl stdin AQfxjP.txt",
+					"file": "/tmp/subl stdin JmckLT.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -960,7 +976,7 @@
 				},
 				{
 					"buffer": 12,
-					"file": "/tmp/subl stdin SwD8YN.txt",
+					"file": "/tmp/subl stdin 1sRyFm.txt",
 					"settings":
 					{
 						"buffer_size": 0,
@@ -986,6 +1002,58 @@
 				},
 				{
 					"buffer": 13,
+					"file": "/tmp/subl stdin AQfxjP.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/tmp/subl stdin SwD8YN.txt",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
 					"settings":
 					{
 						"buffer_size": 7,
@@ -1011,7 +1079,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 16,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -1037,7 +1105,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 17,
 					"file": "examples/hello-world/package.json",
 					"settings":
 					{
@@ -1063,7 +1131,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 18,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -1089,7 +1157,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 17,
+					"buffer": 19,
 					"file": "examples/hello-world/src/web/index.html",
 					"settings":
 					{
@@ -1100,8 +1168,8 @@
 						"selection":
 						[
 							[
-								53,
-								53
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1115,7 +1183,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 18,
+					"buffer": 20,
 					"file": "examples/hello-world/src/common/index.js",
 					"settings":
 					{
@@ -1141,7 +1209,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 21,
 					"file": "examples/hello-world/src/web/mesh.merge.json",
 					"settings":
 					{
@@ -1152,8 +1220,8 @@
 						"selection":
 						[
 							[
-								131,
-								131
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1169,7 +1237,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 22,
 					"file": "examples/hello-world/src/web/package.json",
 					"settings":
 					{
@@ -1180,8 +1248,8 @@
 						"selection":
 						[
 							[
-								33,
-								33
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1195,7 +1263,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 23,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -1221,7 +1289,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 24,
 					"file": "examples/hello-world/src/common/plugin.js",
 					"settings":
 					{
@@ -1247,7 +1315,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 25,
 					"file": "src/web/utils.js",
 					"settings":
 					{
@@ -1273,7 +1341,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 26,
 					"file": "src/node/middleware/beanpoll.js",
 					"settings":
 					{
@@ -1300,7 +1368,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 25,
+					"buffer": 27,
 					"file": "src/node/middleware/checkAgent.js",
 					"settings":
 					{
@@ -1311,8 +1379,8 @@
 						"selection":
 						[
 							[
-								579,
-								579
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1327,7 +1395,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 26,
+					"buffer": 28,
 					"file": "package.json",
 					"settings":
 					{
@@ -1338,8 +1406,8 @@
 						"selection":
 						[
 							[
-								567,
-								567
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1355,7 +1423,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 27,
+					"buffer": 29,
 					"file": "/tmp/subl stdin DRW2gV.txt",
 					"settings":
 					{
@@ -1381,7 +1449,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 28,
+					"buffer": 30,
 					"file": "examples/hello-world/makefile",
 					"settings":
 					{
@@ -1392,8 +1460,8 @@
 						"selection":
 						[
 							[
-								81,
-								81
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1407,61 +1475,8 @@
 					"type": "text"
 				},
 				{
-					"buffer": 29,
-					"file": "examples/hello-world/src/common/routes.js",
-					"settings":
-					{
-						"buffer_size": 265,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								223,
-								223
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 30,
-					"file": "examples/hello-world/lib/web/index.js",
-					"settings":
-					{
-						"buffer_size": 325,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								321,
-								256
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 31,
-					"file": "examples/hello-world/lib/web/js/routes.js",
+					"file": "examples/hello-world/src/common/routes.js",
 					"settings":
 					{
 						"buffer_size": 265,
@@ -1488,6 +1503,59 @@
 				},
 				{
 					"buffer": 32,
+					"file": "examples/hello-world/lib/web/index.js",
+					"settings":
+					{
+						"buffer_size": 325,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 33,
+					"file": "examples/hello-world/lib/web/js/routes.js",
+					"settings":
+					{
+						"buffer_size": 265,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 34,
 					"file": "examples/hello-world/lib/web/index.html",
 					"settings":
 					{
@@ -1498,8 +1566,8 @@
 						"selection":
 						[
 							[
-								53,
-								53
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1513,7 +1581,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 33,
+					"buffer": 35,
 					"file": ".cupboard",
 					"settings":
 					{
@@ -1524,8 +1592,8 @@
 						"selection":
 						[
 							[
-								90,
-								57
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1539,7 +1607,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 34,
+					"buffer": 36,
 					"file": "/tmp/subl stdin fQj5ET.txt",
 					"settings":
 					{
@@ -1565,7 +1633,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 35,
+					"buffer": 37,
 					"file": "/tmp/subl stdin nEzLu1.txt",
 					"settings":
 					{
@@ -1591,7 +1659,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 36,
+					"buffer": 38,
 					"file": "/tmp/subl stdin wuD5ba.txt",
 					"settings":
 					{
@@ -1617,11 +1685,11 @@
 					"type": "text"
 				},
 				{
-					"buffer": 37,
+					"buffer": 39,
 					"file": "lib/web/index.js",
 					"settings":
 					{
-						"buffer_size": 4491,
+						"buffer_size": 4740,
 						"regions":
 						{
 						},
@@ -1638,13 +1706,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 38,
+					"buffer": 40,
 					"file": "/tmp/subl stdin tY3pAm.txt",
 					"settings":
 					{

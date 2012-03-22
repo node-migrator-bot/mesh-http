@@ -203,8 +203,9 @@ exports.plugin = function(router)
 
 
 				var stringified = qs.stringify(urlParts.query || {});
+				// alert(stringified.length)
 
-				var href = urlParts.pathname + stringified.length ? '?' + stringified : '';
+				var href = urlParts.pathname + (stringified.length ? '?' + stringified : '');
                                                       
 				logger.info(sprintf('redirect to %s', href));
 
