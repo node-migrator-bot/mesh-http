@@ -17,7 +17,7 @@ module.exports = function(router, params) {
 		 */
 
 		'pull -unfilterable -overridable /': function(req, res) {
-			path.exists(index, function(exists) {
+			fs.exists(index, function(exists) {
 
 				if(!exists) return res.error(new Error('Index file does not exist'));
 
